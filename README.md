@@ -115,13 +115,40 @@
   kill -pid
   ```
 
-  
+- use natapp to ssh
+
+  ~~~bash
+  ./natapp -authtoken=c404277c2756bb08
+  ~~~
 
   
 
   
 
 ## User & Permissions Management
+
+* Access Permissions
+
+  ~~~bash
+  444 r--r--r--
+  600 drw-------
+  644 drw-r--r--
+  666 drw-rw-rw-
+  700 drwx------
+  744 drwxr--r--
+  755 drwxr-xr-x
+  777 drwxrwxrwx
+  # r-4 w-2 x-1
+  ~~~
+
+* List file/directory access permissions info
+
+  ~~~bash
+  ls -l xxx.xxx 
+  # return filetype/user/group/other
+  ~~~
+
+  
 
 ## Disk Management
 
@@ -155,4 +182,27 @@
   sudo chsh
   ```
 
+pytorch 
+
+
+## Shadowsocks
+
+* enable local
+
+  ~~~bash
+   sslocal -c /home/yelab/shadowsocks.json
+  ~~~
+
+
+
+
+## Set tensorflow
+
+* cuda environment 
+
+  ~~~ bash
+  export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/
+  ~~~
+
   
+
